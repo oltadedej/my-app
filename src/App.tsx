@@ -13,6 +13,13 @@ import Profile from './pages/Profile';
 import Settings from './pages/Settings';
 import Dashboard from './pages/Dashboard';
 import NavigateButton from './components/NavigationButton';
+import ClickEvent from './utils/Events/ClickEvent';
+import FormValidationBuiltIn from './utils/Validations/FormValidationBuiltIn';
+import CustomFormValidation from './utils/Validations/CustomFormValidation';
+import FormikFormValidation from './utils/Validations/FormikFormValidation';
+import AsyncValidationForm from './utils/Validations/AsyncFormValidation';
+import "bootstrap/dist/css/bootstrap.min.css";
+import styles from './App.module.css';
 
 // function App() {
 //   return (
@@ -100,19 +107,19 @@ import NavigateButton from './components/NavigationButton';
 
 
 //React Router with useNavigate
-function App() {
-  return (
-    <Router>
-      <h1>React Router Navigation Example</h1>
-      <NavigateButton />
+// function App() {
+//   return (
+//     <Router>
+//       <h1>React Router Navigation Example</h1>
+//       <NavigateButton />
 
-      <Routes>
-        {/* Dynamic Route for User Profile */}
-        <Route path="/user/:id" element={<UserProfile />} />
-      </Routes>
-    </Router>
-  );
-}
+//       <Routes>
+//         {/* Dynamic Route for User Profile */}
+//         <Route path="/user/:id" element={<UserProfile />} />
+//       </Routes>
+//     </Router>
+//   );
+// }
 
 //React Router with useNavigate and show only elements from a page 
 // const App: React.FC = () => {
@@ -134,5 +141,52 @@ function App() {
 //   );
 // };
 
+
+//Leksion 5
+// function App() {
+//   return (
+//     <div>
+//       {/* <h1>React Events</h1>
+//       <ClickEvent></ClickEvent>
+//       <h1>React Validations Built In HTML</h1>
+//       <FormValidationBuiltIn/>
+//       <h1>Custom Form Validation</h1>
+//       <CustomFormValidation/>
+//       <h1>Formik Form Validation</h1>
+//       <FormikFormValidation/> */}
+//       <h1> Async Form Validation</h1>
+//       <AsyncValidationForm/>
+//     </div>
+//   );
+// }
+
+
+//Simple CSS
+// function App() {
+//   return (
+//     <div className="container">
+//     <h1>Hello, World!</h1>
+//   </div>
+//   );
+// }
+
+//Bootstrap css
+// function App() {
+//   return (
+//     <div className="container mt-5">
+//     <button className="btn btn-primary">Buton i dizenjuar nga Bootstrap</button>
+//   </div>
+//   );
+// }
+
+
+//Module CSS
+function App() {
+  return (
+    <div className={styles.container}>
+      <h1>Hello, World From Module CSS!</h1>
+    </div>
+  );
+}
 
 export default App;

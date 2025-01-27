@@ -4,12 +4,16 @@
   "private": true,
   "dependencies": {
     "@types/react-router-dom": "^5.3.3",
+    "@types/yup": "^0.32.0",
+    "bootstrap": "^5.3.3",
     "cra-template-typescript": "1.2.0",
+    "formik": "^2.4.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.1.1",
     "react-scripts": "5.0.1",
-    "web-vitals": "^4.2.4"
+    "web-vitals": "^4.2.4",
+    "yup": "^1.6.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,6 +42,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
+    "@types/css-modules": "^1.0.5",
     "@types/jest": "^29.5.14",
     "@types/react": "^19.0.3",
     "@types/react-dom": "^19.0.2"

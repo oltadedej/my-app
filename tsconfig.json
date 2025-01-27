@@ -1,14 +1,23 @@
 {
-    "compilerOptions": {
-      "target": "es5",
-      "lib": ["dom", "es2015"],
-      "jsx": "react",
-      "strict": true,
-      "esModuleInterop": true,
-      "moduleResolution": "node",
-      "skipLibCheck": true,
-      "types": ["react", "react-dom", "jest"]
-    },
-    "include": ["src"]
-  }
-  
+  "compilerOptions": {
+    "target": "ES6", // or "ES2016" or later
+    "lib": [
+      "DOM",
+      "ES2016"
+    ], // Include ES2016 or later
+    "jsx": "react",
+    "strict": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "types": [
+      "react",
+      "react-dom",
+      "jest"
+    ]
+  },
+  "include": [
+    "src"
+  ]
+}
