@@ -20,6 +20,14 @@ import FormikFormValidation from './utils/Validations/FormikFormValidation';
 import AsyncValidationForm from './utils/Validations/AsyncFormValidation';
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from './App.module.css';
+import CounterWithReducer from './reducer/CounterWithReducer';
+import FormWithReducer from './reducer/FormWithReducer';
+import ThemeProvider from './context/ThemeProvider';
+import ThemedComponent from './context/ThemedComponent';
+import AuthProvider from './context/AuthenticationContext';
+import { LoginDashboard, LoginPage } from './context/LoginComponent';
+import AddTask from './redux/AddTask';
+import TaskList from './redux/TaskList';
 
 // function App() {
 //   return (
@@ -181,12 +189,55 @@ import styles from './App.module.css';
 
 
 //Module CSS
+// function App() {
+//   return (
+//     <div className={styles.container}>
+//       <h1>Hello, World From Module CSS!</h1>
+//     </div>
+//   );
+// }
+
+//Leksion 6
+// function App() {
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         {/* <CounterWithReducer/> */}
+//         <FormWithReducer/>
+//       </header>
+//     </div>
+//   );
+// }
+
+//leksion 6 --> Theme Provider
+
+// function App() {
+//   return (
+//     <ThemeProvider>
+//       <ThemedComponent />
+//     </ThemeProvider>
+//   );
+// }
+
+// function App() {
+//   return (
+//     <AuthProvider>
+//       <LoginPage />
+//       <LoginDashboard />
+//     </AuthProvider>
+//   );
+// };
+
+
 function App() {
   return (
-    <div className={styles.container}>
-      <h1>Hello, World From Module CSS!</h1>
+    <div>
+      <h1>Task Management System</h1>
+      <AddTask />
+      <TaskList />
     </div>
   );
-}
+};
+
 
 export default App;
