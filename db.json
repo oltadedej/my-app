@@ -1,0 +1,61 @@
+{
+    "books": [
+        {
+          "id": 1,
+          "title": "The Great Gatsby",
+          "author": "F. Scott Fitzgerald",
+          "genre": "Classic",
+          "year": 1925
+        },
+        {
+          "id": 2,
+          "title": "To Kill a Mockingbird",
+          "author": "Harper Lee",
+          "genre": "Fiction",
+          "year": 1960
+        },
+        {
+          "id": 3,
+          "title": "1984",
+          "author": "George Orwell",
+          "genre": "Dystopian",
+          "year": 1949
+        },
+        {
+          "id": 4,
+          "title": "The Hobbit",
+          "author": "J.R.R. Tolkien",
+          "genre": "Fantasy",
+          "year": 1937
+        },
+        {
+          "id": 5,
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "genre": "Romance",
+          "year": 1813
+        },
+        {
+          "id": 6,
+          "title": "The Catcher in the Rye",
+          "author": "J.D. Salinger",
+          "genre": "Fiction",
+          "year": 1951
+        },
+        {
+          "id": 7,
+          "title": "The Da Vinci Code",
+          "author": "Dan Brown",
+          "genre": "Thriller",
+          "year": 2003
+        },
+        {
+          "id": 8,
+          "title": "Harry Potter and the Sorcerer's Stone",
+          "author": "J.K. Rowling",
+          "genre": "Fantasy",
+          "year": 1997
+        }
+      ]
+  }
+  

@@ -17,7 +17,8 @@ const reducer = (state: State, action: Action): State => {
 };
 
 const CounterWithReducer: React.FC = () => {
-  const [state, dispatch] = useReducer(reducer, { count: 0 });
+  const initialState: State = { count: 0 };
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
     <div>
