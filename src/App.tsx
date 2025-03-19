@@ -36,7 +36,7 @@ import NavigateButton from './components/NavigationButton';
 // }
 
 
-// //Leksion 2
+// //Leksion 3
 // function App() {
 //   return (
 //     <div>
