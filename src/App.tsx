@@ -13,7 +13,9 @@ import Profile from './pages/Profile';
 import Settings from './pages/Settings';
 import Dashboard from './pages/Dashboard';
 import NavigateButton from './components/NavigationButton';
+import Hello from './components/Hello';
 
+//Leksion 2, Base structure of react application
 // function App() {
 //   return (
 //     <div className="App">
@@ -40,7 +42,14 @@ import NavigateButton from './components/NavigationButton';
 // function App() {
 //   return (
 //     <div>
+//       {/* <Hello/> */}
+//       {/* <Greeting name='User1'/> */}
+//       {/* <Counter/> */}
+//       {/* <Input/> */}
+//       {/* <ButtonClick/> */}
 //       <FormExample/>
+//       {/* <Hello/> */}
+//       {/* <FormExample/> */}
 //       {/* <Input/> */}
 //       {/* <ButtonClick/> */}
 //       {/* <Counter/>
@@ -49,7 +58,7 @@ import NavigateButton from './components/NavigationButton';
 //   );
 // }
 
-//React-Router
+//React-Router  --> aksesimi i url direkt ne browser
 // function App() {
 //   return (
 //     <Router>
@@ -100,39 +109,39 @@ import NavigateButton from './components/NavigationButton';
 
 
 //React Router with useNavigate
-function App() {
-  return (
-    <Router>
-      <h1>React Router Navigation Example</h1>
-      <NavigateButton />
-
-      <Routes>
-        {/* Dynamic Route for User Profile */}
-        <Route path="/user/:id" element={<UserProfile />} />
-      </Routes>
-    </Router>
-  );
-}
-
-//React Router with useNavigate and show only elements from a page 
-// const App: React.FC = () => {
+// function App() {
 //   return (
 //     <Router>
-//       <Routes>
-//         <Route path="/home" element={
-//             <div>
-//               <h1>React Router Navigation Example</h1>
-//               <NavigateButton />
-//             </div>
-//           }
-//         />
+//       <h1>React Router Navigation Example</h1>
+//       <NavigateButton />
 
-//         {/* User Profile Page (No H1) */}
+//       <Routes>
+//         {/* Dynamic Route for User Profile */}
 //         <Route path="/user/:id" element={<UserProfile />} />
 //       </Routes>
 //     </Router>
 //   );
-// };
+// }
+
+//React Router with useNavigate and show only elements from a page  access home and on click it shows only elements of a page
+const App: React.FC = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/home" element={
+            <div>
+              <h1>React Router Navigation Example</h1>
+              <NavigateButton />
+            </div>
+          }
+        />
+
+        {/* User Profile Page (No H1) */}
+        <Route path="/user/:id" element={<UserProfile />} />
+      </Routes>
+    </Router>
+  );
+};
 
 
 export default App;

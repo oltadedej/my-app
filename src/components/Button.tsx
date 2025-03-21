@@ -5,7 +5,7 @@ const ButtonClick = () => {
       alert(`Hello, ${name}!`);
     };
   
-    return <button onClick={() => handleClick('John')}>Click Me</button>;
+    return <button onClick={() => handleClick('parameter')}>Click Me</button>;
   };
 
   export default ButtonClick;
