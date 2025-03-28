@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FormEvent, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Greeting from './components/Greeting';
@@ -22,6 +22,7 @@ import { dev } from './types/leksion4/Employee';
 import { UserRole, userRole } from './types/leksion4/UserRole';
 import { identity } from './types/leksion4/Identity';
 import { numberValue } from './types/leksion4/CastingExamples';
+import { bookLists, isBookReturned, searchBook } from './types/leksion4/seminar4/seminar4';
 // function App() {
 //   return (
 //     <div className="App">
@@ -256,8 +257,22 @@ import { numberValue } from './types/leksion4/CastingExamples';
 
 //divide
 function App() {
+  const [search, setSearch] = useState("");
+  console.log(isBookReturned(bookLists[0]))
+  console.log(isBookReturned(bookLists[1]))
+  console.log(isBookReturned(bookLists[2]))
+
+  console.log(searchBook(search))
   return (
-   <h1>{divide(10,0)}</h1>
+   <>
+    <h1>Test</h1>
+    <input 
+      id='search'
+      value={search}
+      onChange={(e: FormEvent<HTMLInputElement>) => setSearch(e.currentTarget.value)}
+    />
+   </>
   );
 }
+
 export default App;
