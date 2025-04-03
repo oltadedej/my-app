@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FormEvent, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Greeting from './components/Greeting';
@@ -21,6 +21,16 @@ import AsyncValidationForm from './utils/Validations/AsyncFormValidation';
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from './App.module.css';
 
+import { divide } from './types/leksion4/ErrorHandling';
+import { add, greet } from './types/leksion4/Functions';
+import { audiVehicle, teslaVehicle } from './types/leksion4/Vehicle';
+import { ferrari } from './types/leksion4/SportsVehicle';
+import { myDog } from './types/leksion4/Animal';
+import { dev } from './types/leksion4/Employee';
+import { UserRole, userRole } from './types/leksion4/UserRole';
+import { identity } from './types/leksion4/Identity';
+import { numberValue } from './types/leksion4/CastingExamples';
+import { bookLists, isBookReturned, searchBook } from './types/leksion4/seminar4/seminar4';
 // function App() {
 //   return (
 //     <div className="App">
@@ -142,51 +152,135 @@ import styles from './App.module.css';
 // };
 
 
-//Leksion 5
-function App() {
-  return (
-    <div>
-      <h1>React Events</h1>
-      <ClickEvent></ClickEvent>
-      {/* <h1>React Validations Built In HTML</h1>
-      <FormValidationBuiltIn/>
-      <h1>Custom Form Validation</h1>
-      <CustomFormValidation/>
-      <h1>Formik Form Validation</h1>
-      <FormikFormValidation/>
-      <h1> Async Form Validation</h1>
-      <AsyncValidationForm/> */}
-    </div>
-  );
-}
-
-
-//Simple CSS
+//Leksion 4 Add
 // function App() {
 //   return (
-//     <div className="container">
-//     <h1>Hello, World!</h1>
-//   </div>
+//     <h1>Adding 2 numbers: {add(10, 10)}</h1>
 //   );
 // }
 
-//Bootstrap css
+//Greet Overload
 // function App() {
 //   return (
-//     <div className="container mt-5">
-//     <button className="btn btn-primary">Buton i dizenjuar nga Bootstrap</button>
-//   </div>
+//     // use this <> </> to avoid adding a div
+//     <> 
+//    <h1>{greet('John')}</h1>
+//    <h1>{greet(20)}</h1>
+//    </>
 //   );
 // }
 
-
-//Module CSS
+//Vehicle class
 // function App() {
 //   return (
-//     <div className={styles.container}>
-//       <h1>Hello, World From Module CSS!</h1>
+//     <div>
+//       <h1>Vehicle Information</h1>
+//       <h2>Model: {teslaVehicle.model}</h2>
+//       <h3>Info: {teslaVehicle.info}</h3>
+//       <p>{teslaVehicle.showEngineNumber()}</p>
+//       {/* <h4>Speed: {teslaVehicle.speed}</h4>  
+//       //nuk mund ta aksesojme dot me . , na duhet nje funksion i ngjashem me showEngineNumber */}
+
+//       <h2>Model: {audiVehicle.model}</h2>
+//       <h3>Info: {audiVehicle.info}</h3>
+//       <p>{audiVehicle.showEngineNumber()}</p>
+//       {/* <h3>Speed: {audiVehicle.speed}</h3> */}
 //     </div>
 //   );
 // }
+
+//Trashegimia duke perdorur klasat normale
+// function App() {
+//   return (
+//     <div>
+//       <h1>Sports Vehicle Information</h1>
+//       <h2>Model: {ferrari.model}</h2>
+//       <p>{ferrari.showEngineNumber()}</p>
+//       <h3>Boosting Speed: {ferrari.boostSpeed()}</h3> 
+//       {/* child fuction */}
+//     </div>
+//   );
+// }
+
+//Trashegimia duke perdorur klasat abstrakte
+// function App() {
+//   return (
+//     <div>
+//       <h1>Animal</h1>
+//       <h2>Dog Name: {myDog.name}</h2>
+//       <p>{myDog.makeSound()}</p>
+//     </div>
+//   );
+// }
+
+//Trashegimia duke perdorur interface
+// function App() {
+//   return (
+//     <div>
+//       <h1>Developer</h1>
+//       <h2>Dev Name: {dev.name}</h2>
+//       <p>{dev.work()}</p>
+//     </div>
+//   );
+// }
+
+//Enums
+//  function App() {
+//   return (
+//     <>
+//     {/* i lexohet vlera ne int */}
+//     <h1>User Role Enum Value: {userRole} </h1> 
+//     {/* i lexohet vlera ne string */}
+//     <h1>User Role Enum Value: {UserRole[userRole]} </h1>
+//     </>
+//   );
+// }
+
+//GENERICS NE TYPESCRIPT
+// function App() {
+//   return (
+//     <>
+//     {/* Generics me int */}
+//     <h3>Number Generics: {identity<number>(10)} </h3> 
+//     <h3>String Generics: {identity<string>("Welcome")} </h3> 
+//     <h3>Boolean Generics: {identity<boolean>(true) } </h3> 
+//     {/* Nuk e afishon vlere true, false pasi reacti i ben ignore true false, null or undefined */}
+//     <h3>Boolean Generics: {identity<boolean>(true).toString() } </h3> 
+//     </>
+//   );
+// }
+
+//CASTING I TE DHENAVE
+// function App() {
+//   return (
+//     <>
+//       {/* Casting  Convertimi i unknown ne string dhe afishimi i gjatesise se arrayt*/}
+//       <div>
+//         <h3>{numberValue} </h3>
+//       </div>
+//     </>
+//   );
+// }
+
+
+//divide
+function App() {
+  const [search, setSearch] = useState("");
+  console.log(isBookReturned(bookLists[0]))
+  console.log(isBookReturned(bookLists[1]))
+  console.log(isBookReturned(bookLists[2]))
+
+  console.log(searchBook(search))
+  return (
+   <>
+    <h1>Test</h1>
+    <input 
+      id='search'
+      value={search}
+      onChange={(e: FormEvent<HTMLInputElement>) => setSearch(e.currentTarget.value)}
+    />
+   </>
+  );
+}
 
 export default App;

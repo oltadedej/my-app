@@ -1,10 +1,12 @@
-function divide(a: number, b: number): number {
-    if (b === 0) {
-      throw new Error("Cannot divide by zero");
-    }
-    return a / b;
+export function divide(a: number, b: number): number {
+  if (b === 0) {
+    throw new Error("Cannot divide by zero");
   }
-  
+  return a / b;
+}
+
+function divideWithInstanceOfError() {
+
   try {
     let result = divide(10, 0); // This will throw an error
     console.log(result);
@@ -13,9 +15,11 @@ function divide(a: number, b: number): number {
       console.error("Error occurred:", error.message); // Output: Error occurred: Cannot divide by zero
     }
   }
+};
 
-  
+
 //Erroret ne baze te tipit
+function typeOfErrors() {
   try {
     throw new TypeError("This is a type error");
   } catch (error) {
@@ -25,4 +29,4 @@ function divide(a: number, b: number): number {
       console.log("Unknown error occurred");
     }
   }
-  
+}

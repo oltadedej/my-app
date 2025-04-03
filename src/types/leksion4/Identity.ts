@@ -1,5 +1,7 @@
-function identity<T>(value: T): T {
+export function identity<T>(value: T): T {
     return value;
+
+    //per te shfaqur dhe vleren 
   }
   
   console.log(identity<number>(10)); // ✅ Output: 10

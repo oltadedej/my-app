@@ -13,20 +13,21 @@ abstract class Animal {
   
   // Subclass that extends the abstract class
   class Dog extends Animal {
-    makeSound(): void {
-      console.log(`${this.name} says: Woof! Woof!`);
+    makeSound(): string {
+      return(`${this.name} says: Woof! Woof!`);
     }
   }
   
   // Subclass that extends the abstract class
   class Cat extends Animal {
-    makeSound(): void {
-      console.log(`${this.name} says: Meow! Meow!`);
+    makeSound(): string {
+      //console.log(`${this.name} says: Meow! Meow!`);
+      return(`${this.name} says: Meow! Meow!`);
     }
   }
   
   // Creating instances
-  const myDog = new Dog("Buddy");
+  export const myDog = new Dog("Buddy");
   myDog.makeSound(); // Output: Buddy says: Woof! Woof!
   myDog.move(); // Output: Buddy is moving...
   
