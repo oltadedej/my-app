@@ -143,22 +143,22 @@ import styles from './App.module.css';
 
 
 //Leksion 5
-// function App() {
-//   return (
-//     <div>
-//       {/* <h1>React Events</h1>
-//       <ClickEvent></ClickEvent>
-//       <h1>React Validations Built In HTML</h1>
-//       <FormValidationBuiltIn/>
-//       <h1>Custom Form Validation</h1>
-//       <CustomFormValidation/>
-//       <h1>Formik Form Validation</h1>
-//       <FormikFormValidation/> */}
-//       <h1> Async Form Validation</h1>
-//       <AsyncValidationForm/>
-//     </div>
-//   );
-// }
+function App() {
+  return (
+    <div>
+      <h1>React Events</h1>
+      <ClickEvent></ClickEvent>
+      {/* <h1>React Validations Built In HTML</h1>
+      <FormValidationBuiltIn/>
+      <h1>Custom Form Validation</h1>
+      <CustomFormValidation/>
+      <h1>Formik Form Validation</h1>
+      <FormikFormValidation/>
+      <h1> Async Form Validation</h1>
+      <AsyncValidationForm/> */}
+    </div>
+  );
+}
 
 
 //Simple CSS
@@ -181,12 +181,12 @@ import styles from './App.module.css';
 
 
 //Module CSS
-function App() {
-  return (
-    <div className={styles.container}>
-      <h1>Hello, World From Module CSS!</h1>
-    </div>
-  );
-}
+// function App() {
+//   return (
+//     <div className={styles.container}>
+//       <h1>Hello, World From Module CSS!</h1>
+//     </div>
+//   );
+// }
 
 export default App;
