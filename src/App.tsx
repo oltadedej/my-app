@@ -30,6 +30,7 @@ import { UserRole, userRole } from './types/leksion4/UserRole';
 import { identity } from './types/leksion4/Identity';
 import { numberValue } from './types/leksion4/CastingExamples';
 import { bookLists, isBookReturned, searchBook } from './types/leksion4/seminar4/seminar4';
+import LibraryForm from './components/seminar5/LibraryForm';
 // function App() {
 //   return (
 //     <div className="App">
@@ -318,12 +319,18 @@ import { bookLists, isBookReturned, searchBook } from './types/leksion4/seminar4
 
 
 //Module CSS
+// function App() {
+//   return (
+//     <div className={styles.container}>
+//       <h1>Hello, World From Module CSS!</h1>
+//     </div>
+//   );
+// }
+
+//seminar 5
 function App() {
   return (
-    <div className={styles.container}>
-      <h1>Hello, World From Module CSS!</h1>
-    </div>
+    <LibraryForm/>
   );
 }
-
 export default App;
