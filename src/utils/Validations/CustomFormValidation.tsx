@@ -4,7 +4,7 @@ const CustomFormValidation: React.FC = () => {
   // State for form inputs
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  
+
   // State for error messages
   const [emailError, setEmailError] = useState<string | null>(null);
   const [passwordError, setPasswordError] = useState<string | null>(null);
@@ -45,6 +45,7 @@ const CustomFormValidation: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit} style={{ maxWidth: "400px", margin: "auto" }}>
+      <h3> Custom Form Validation</h3>
       {/* Email Input */}
       <div style={{ marginBottom: "1rem" }}>
         <label htmlFor="email" style={{ display: "block", marginBottom: "0.5rem" }}>

@@ -20,7 +20,6 @@ import FormikFormValidation from './utils/Validations/FormikFormValidation';
 import AsyncValidationForm from './utils/Validations/AsyncFormValidation';
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from './App.module.css';
-
 import { divide } from './types/leksion4/ErrorHandling';
 import { add, greet } from './types/leksion4/Functions';
 import { audiVehicle, teslaVehicle } from './types/leksion4/Vehicle';
@@ -264,22 +263,66 @@ import { bookLists, isBookReturned, searchBook } from './types/leksion4/seminar4
 
 
 //divide
-function App() {
-  const [search, setSearch] = useState("");
-  console.log(isBookReturned(bookLists[0]))
-  console.log(isBookReturned(bookLists[1]))
-  console.log(isBookReturned(bookLists[2]))
+// function App() {
+//   const [search, setSearch] = useState("");
+//   console.log(isBookReturned(bookLists[0]))
+//   console.log(isBookReturned(bookLists[1]))
+//   console.log(isBookReturned(bookLists[2]))
 
-  console.log(searchBook(search))
+//   console.log(searchBook(search))
+//   return (
+//    <>
+//     <h1>Test</h1>
+//     <input 
+//       id='search'
+//       value={search}
+//       onChange={(e: FormEvent<HTMLInputElement>) => setSearch(e.currentTarget.value)}
+//     />
+//    </>
+//   );
+// }
+
+
+//Leksion 5
+// function App() {
+//   return (
+//     <div>
+//       <h1>React Events</h1>
+//       {/* <ClickEvent /> */}
+//       {/* <FormValidationBuiltIn /> */}
+//        {/* <CustomFormValidation /> */}
+//       {/* <FormikFormValidation /> */}
+//       <AsyncValidationForm />  
+//     </div>
+//   );
+// }
+
+
+//Simple CSS
+// function App() {
+//   return (
+//     <div className="container">
+//     <h1>Hello, World!</h1>
+//   </div>
+//   );
+// }
+
+//Bootstrap css
+// function App() {
+//   return (
+//     <div className="container mt-5">
+//     <button className="btn btn-primary">Buton i dizenjuar nga Bootstrap</button>
+//   </div>
+//   );
+// }
+
+
+//Module CSS
+function App() {
   return (
-   <>
-    <h1>Test</h1>
-    <input 
-      id='search'
-      value={search}
-      onChange={(e: FormEvent<HTMLInputElement>) => setSearch(e.currentTarget.value)}
-    />
-   </>
+    <div className={styles.container}>
+      <h1>Hello, World From Module CSS!</h1>
+    </div>
   );
 }
 
