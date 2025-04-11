@@ -28,6 +28,7 @@ import AuthProvider from './context/AuthenticationContext';
 import { LoginDashboard, LoginPage } from './context/LoginComponent';
 import AddTask from './redux/AddTask';
 import TaskList from './redux/TaskList';
+import Book from './seminar6/Book';
 
 // function App() {
 //   return (
@@ -211,13 +212,11 @@ import TaskList from './redux/TaskList';
 
 //leksion 6 --> Theme Provider
 
-// function App() {
-//   return (
-//     <ThemeProvider>
-//       <ThemedComponent />
-//     </ThemeProvider>
-//   );
-// }
+function App() {
+  return (
+    <Book />
+  );
+}
 
 //  function App() {
 //   return (
@@ -229,15 +228,15 @@ import TaskList from './redux/TaskList';
 // };
 
 
-function App() {
-  return (
-    <div>
-      <h1>Task Management System</h1>
-      <AddTask />
-      <TaskList />
-    </div>
-  );
-};
+// function App() {
+//   return (
+//     <div>
+//       <h1>Task Management System</h1>
+//       <AddTask />
+//       <TaskList />
+//     </div>
+//   );
+// };
 
 
 export default App;
