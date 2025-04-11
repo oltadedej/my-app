@@ -203,7 +203,7 @@ import TaskList from './redux/TaskList';
 //     <div className="App">
 //       <header className="App-header">
 //         {/* <CounterWithReducer/> */}
-//         <FormWithReducer/>
+//         {/* <FormWithReducer/> */}
 //       </header>
 //     </div>
 //   );
@@ -219,7 +219,7 @@ import TaskList from './redux/TaskList';
 //   );
 // }
 
-// function App() {
+//  function App() {
 //   return (
 //     <AuthProvider>
 //       <LoginPage />

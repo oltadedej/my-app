@@ -4,6 +4,7 @@ type FormState = {
   name: string;
   email: string;
   password: string;
+  // userName?: string;
 };
 type Action =
   | { type: "updateName"; payload: string }
@@ -16,11 +17,11 @@ const initialState: FormState = { name: "", email: "", password: "" };
 const reducer = (state: FormState, action: Action): FormState => {
   switch (action.type) {
     case "updateName":
-      return { ...state, name: action.payload };  
-      //perdorimi i ... perpara nje objekti ben te mundur destrukturimin e objektit
-      //dmth ndarjen e tij ne objekt json si {name:"", email:"", password:""}
-      // dhe me pas bejme update vetem property-n e cila na intereson 
-      //ne rastin tone eshte email
+      return { ...state, name: action.payload };
+    //perdorimi i ... perpara nje objekti ben te mundur destrukturimin e objektit
+    //dmth ndarjen e tij ne objekt json si {name:"", email:"", password:""}
+    // dhe me pas bejme update vetem property-n e cila na intereson 
+    //ne rastin tone eshte email
     case "updateEmail":
       return { ...state, email: action.payload };
     case "updatePassword":
@@ -60,6 +61,13 @@ const FormWithReducer: React.FC = () => {
         value={state.password}
         onChange={(e) => dispatch({ type: "updatePassword", payload: e.target.value })}
       />
+
+      {/* <input
+        type="username"
+        placeholder="userName"
+        value={state.userName}
+        onChange={(e) => dispatch({ type: "updateUsername", payload: e.target.value })}
+      /> */}
 
       <button type="submit">Submit</button>
       <button type="button" onClick={() => dispatch({ type: "reset" })}>
