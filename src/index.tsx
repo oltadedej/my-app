@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import Hello from './components/Hello';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
+import BookContextProvider from './seminar6/BookContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -24,9 +25,9 @@ const root = ReactDOM.createRoot(
 
 //Leksion 6 React Redux State Management
 root.render(
-  <Provider store={store}>
+  <BookContextProvider>
     <App />
-  </Provider>
+  </BookContextProvider>
 );
 
 

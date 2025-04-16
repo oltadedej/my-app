@@ -28,6 +28,7 @@ import AuthProvider from './context/AuthenticationContext';
 import { LoginDashboard, LoginPage } from './context/LoginComponent';
 import AddTask from './redux/AddTask';
 import TaskList from './redux/TaskList';
+import Book from './seminar6/Book';
 import CounterWithHook from './hooks/CounterWithHook';
 import CounterWithCustomHook from './hooks/CounterWithCustomHook';
 import UserListWithAxios from './axios/UserListWithAxios';
@@ -209,7 +210,7 @@ import DeleteUser from './axios/DeleteUserWithAxios';
 //     <div className="App">
 //       <header className="App-header">
 //         {/* <CounterWithReducer/> */}
-//         <FormWithReducer/>
+//         {/* <FormWithReducer/> */}
 //       </header>
 //     </div>
 //   );
@@ -219,13 +220,11 @@ import DeleteUser from './axios/DeleteUserWithAxios';
 
 // function App() {
 //   return (
-//     <ThemeProvider>
-//       <ThemedComponent />
-//     </ThemeProvider>
+//     <Book />
 //   );
 // }
 
-// function App() {
+//  function App() {
 //   return (
 //     <AuthProvider>
 //       <LoginPage />
@@ -234,6 +233,16 @@ import DeleteUser from './axios/DeleteUserWithAxios';
 //   );
 // };
 
+
+// function App() {
+//   return (
+//     <div>
+//       <h1>Task Management System</h1>
+//       <AddTask />
+//       <TaskList />
+//     </div>
+//   );
+// };
 
 // function App() {
 //   return (
