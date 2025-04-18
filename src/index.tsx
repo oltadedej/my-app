@@ -24,11 +24,18 @@ const root = ReactDOM.createRoot(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 
 //Leksion 6 React Redux State Management
-root.render(
-  <BookContextProvider>
-    <App />
-  </BookContextProvider>
-);
+// root.render(
+//   <BookContextProvider>
+//     <App />
+//   </BookContextProvider>
+// );
 
+
+//TO UncommentBookContextProvider
+root.render(
+  // <BookContextProvider>
+    <App />
+  // </BookContextProvider>
+);
 
 reportWebVitals();
