@@ -35,6 +35,7 @@ import UserListWithAxios from './axios/UserListWithAxios';
 import CreateUser from './axios/PostUserWithAxios';
 import UpdateUser from './axios/PutUserWithAxios';
 import DeleteUser from './axios/DeleteUserWithAxios';
+import FilteredUsers from './components/FilteredUsers';
 
 // function App() {
 //   return (
@@ -296,14 +297,14 @@ import DeleteUser from './axios/DeleteUserWithAxios';
 // }
 
 //Axios GET CALL
-function App() {
-  return (
-        // <UserListWithAxios/>
-        // <CreateUser/>
-        // <UpdateUser/>
-        <DeleteUser/>
-  );
-}
+// function App() {
+//   return (
+//         // <UserListWithAxios/>
+//         // <CreateUser/>
+//         // <UpdateUser/>
+//         <DeleteUser/>
+//   );
+// }
 
 
 //leksion 7 --> To be Used for adding with Axios
@@ -313,4 +314,13 @@ function App() {
 //     <Book />
 //   );
 // }
+
+
+
+//Leksion 9 --> Connecting Back-End with Front-End
+function App() {
+  return (
+        <FilteredUsers/>
+  );
+}
 export default App;

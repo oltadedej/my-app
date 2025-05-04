@@ -48,6 +48,7 @@
     "@types/axios": "^0.14.4",
     "@types/css-modules": "^1.0.5",
     "@types/jest": "^29.5.14",
+    "@types/node": "^22.14.1",
     "@types/react": "^19.0.3",
     "@types/react-dom": "^19.0.2"
   }
