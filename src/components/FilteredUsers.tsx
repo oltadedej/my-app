@@ -8,6 +8,7 @@ const FilteredUsers: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
 
   const baseUrl = process.env.REACT_APP_BACK_END_API_URL;
+  // const baseUrl2 = process.env.REACT_APP_BACK_END_API_URL2;
 
   const fetchUsers = async (age: number) => {
     try {
@@ -47,10 +48,11 @@ const FilteredUsers: React.FC = () => {
         <ul className="space-y-2">
           {users.map((user) => (
             <li key={user.id} className="p-2 border rounded">
-              {user.name} ({user.age} years old)
+              {user.name} {user.email} ({user.age} years old)
             </li>
           ))}
         </ul>
+    
       )}
     </div>
   );
