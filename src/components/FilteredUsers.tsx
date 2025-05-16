@@ -6,6 +6,7 @@ const FilteredUsers: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]);
   const [minAge, setMinAge] = useState<number>(18);
   const [loading, setLoading] = useState<boolean>(false);
+  
 
   const baseUrl = process.env.REACT_APP_BACK_END_API_URL;
 
