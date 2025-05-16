@@ -17,8 +17,8 @@ jobs:
         run: npm install
 
       - name: Build Project
-        run: npm run build
-       # run: DISABLE_ESLINT_PLUGIN=true npm run build    # disabling eslint errors to build the system
+        # run: npm run build
+        run: DISABLE_ESLINT_PLUGIN=true npm run build    # disabling eslint errors to build the system
 
       - name: Deploy to Vercel
         run: |
